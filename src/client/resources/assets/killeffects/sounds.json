@@ -1,0 +1,11 @@
+{
+  "kill": {
+    "subtitle": "killeffects.kill",
+    "sounds": [
+      {
+        "name": "killeffects:kill",
+        "stream": false
+      }
+    ]
+  }
+}

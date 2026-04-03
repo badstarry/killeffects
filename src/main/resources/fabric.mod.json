@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "killeffects",
+  "version": "${version}",
+  "name": "Killeffects",
+  "description": "客户端击杀特效模组，为生物死亡提供闪电、火焰、烟雾等纯视觉演出，并内置配置界面与 Mod Menu 集成。",
+  "authors": [
+    "badstarry"
+  ],
+  "contact": {
+    "homepage": "https://github.com/badstarry/killeffects",
+    "sources": "https://github.com/badstarry/killeffects"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/killeffects/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "de.badstarry.Killeff"
+    ],
+    "client": [
+      "de.badstarry.client.KilleffClient"
+    ],
+    "fabric-datagen": [
+      "de.badstarry.client.KilleffDataGenerator"
+    ],
+    "modmenu": [
+      "de.badstarry.client.integration.KilleffModMenuApi"
+    ]
+  },
+  "mixins": [
+    "killeffects.mixins.json",
+    {
+      "config": "killeffects.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.6",
+    "minecraft": "~1.21.11",
+    "java": ">=21",
+    "fabric-api": "*",
+    "modmenu": ">=15.0.0-beta.3"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://github.com/badstarry/killeffects"
+      }
+    }
+  }
+}
